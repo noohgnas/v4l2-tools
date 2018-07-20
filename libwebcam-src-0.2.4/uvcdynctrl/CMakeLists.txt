@@ -102,11 +102,11 @@ install (
 # Note that having absolute paths here requires CPACK_SET_DESTDIR to be set to "ON".
 install (
 	FILES	udev/rules/80-uvcdynctrl.rules
-	DESTINATION /lib/udev/rules.d
+	DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/udev/rules.d
 )
 install (
 	PROGRAMS	udev/scripts/uvcdynctrl
-	DESTINATION	/lib/udev
+	DESTINATION	${CMAKE_INSTALL_PREFIX}/lib/udev
 )
 install (
 	DIRECTORY	data
@@ -115,6 +115,6 @@ install (
 )
 install (
 	FILES	${CMAKE_CURRENT_BINARY_DIR}/uvcdynctrl.1.gz ${CMAKE_CURRENT_BINARY_DIR}/uvcdynctrl-${UVCDYNCTRL_VERSION}.1.gz 
-	DESTINATION share/man/man1
+	DESTINATION ${CMAKE_INSTALL_PREFIX}/share/man/man1
 )
 
